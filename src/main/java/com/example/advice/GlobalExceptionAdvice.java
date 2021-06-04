@@ -19,7 +19,7 @@ public class GlobalExceptionAdvice {
     @ExceptionHandler(IllegalArgumentException.class)
     public Result handleIllegalArgumentException(IllegalArgumentException e) {
         log.error("IllegalArgumentException:{}", e.getMessage(), e);
-        return Result.error(ErrorCodeEnum.PARAMS_ILLEGAL.getCode(), ErrorCodeEnum.PARAMS_ILLEGAL.getMessage());
+        return Result.error(ErrorCodeEnum.PARAMS_ILLEGAL.getCode(), e.getMessage());
     }
 
 
