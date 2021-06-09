@@ -1,6 +1,9 @@
 package com.example.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+
+import java.util.Date;
 
 /**
  * @author caohaifengx@163.com 2021-01-08 23:04
@@ -15,4 +18,12 @@ public class User {
      */
     private String name;
     private int age;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    private Date aaa;
+
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date brithDay;
+
+    private Date bbb;
 }

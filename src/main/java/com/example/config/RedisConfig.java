@@ -26,6 +26,7 @@ public class RedisConfig {
         template.setConnectionFactory(factory);
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
         ObjectMapper objectMapper = new ObjectMapper();
+        // 指定要序列化的域，field,get和set， 以及修饰符范围， ANY包含所有，private和public等
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         //objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
         // 存储时，将java类型一并存储
@@ -47,6 +48,7 @@ public class RedisConfig {
 
         // 开启事务
         template.setEnableTransactionSupport(true);
+        // ???
         template.afterPropertiesSet();
         return template;
     }

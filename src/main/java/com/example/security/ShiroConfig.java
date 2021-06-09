@@ -74,7 +74,7 @@ public class ShiroConfig {
         // 测试用
         chain.addPathDefinition("/index", "authc");
 
-        // "/**" 必须放在最后
+        // todo 权限待放开 "/**" 必须放在最后
         chain.addPathDefinition("/**", DefaultFilter.anon.name());
         return chain;
     }
