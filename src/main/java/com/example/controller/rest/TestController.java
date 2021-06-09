@@ -1,7 +1,7 @@
 package com.example.controller.rest;
 
-import com.example.model.TestConfig;
-import com.example.model.User;
+import com.example.entity.TestConfig;
+import com.example.entity.User;
 import com.example.service.TestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
