@@ -1,5 +1,6 @@
 package com.example.config;
 
+import com.example.interceptor.LimitRequestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -11,8 +12,10 @@ import java.util.List;
 
 /**
  * @author caohaifengx@163.com 2021-05-31 16:33
+ * 不建议使用 WebMvcConfigurationSupport 建议使用 WebMvcConfigurer
  */
 //@Component
+@Deprecated
 public class InterceptorConfig extends WebMvcConfigurationSupport {
     //WebMvcConfigurerAdapter已经过时
 

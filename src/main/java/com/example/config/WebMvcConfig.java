@@ -3,6 +3,7 @@ package com.example.config;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.example.interceptor.LimitRequestInterceptor;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
@@ -73,6 +74,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
      * @return
      */
     //@Bean
+    @Deprecated
     public FastJsonHttpMessageConverter fastJsonHttpMessageConverter(){
         FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
         FastJsonConfig fastJsonConfig=new FastJsonConfig();

@@ -1,5 +1,6 @@
-package com.example.config;
+package com.example.component;
 
+import com.example.config.RedisKeySerializerConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.lang.Nullable;
