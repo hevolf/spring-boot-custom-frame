@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -17,6 +18,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  */
 @Configuration
 public class RedisConfig {
+    @Autowired
+    StringRedisSerializer stringRedisSerializer;
 
     // 注入 Spring 容器中，忽略所有警告
     @Bean
@@ -36,7 +39,7 @@ public class RedisConfig {
                 JsonTypeInfo.As.WRAPPER_ARRAY);
 
         jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
-        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+        //StringRedisSerializer stringRedisSerializer = new PrefixStringKeySerializer();
         // key 采用 String 的序列化方式
         template.setKeySerializer(stringRedisSerializer);
         // hash 的 key 也采用 String 的序列化方式

@@ -58,7 +58,7 @@ public class LimitRequestInterceptor implements HandlerInterceptor {
                     }
             );
             // 设置过期时间
-            redisTemplate.expire(LIMIT_METHOD_KEY, 30, TimeUnit.SECONDS);
+            redisTemplate.expire(LIMIT_METHOD_KEY, 30 * 60, TimeUnit.SECONDS);
             members = redisTemplate.opsForSet().members(LIMIT_METHOD_KEY);
         }
         return members;
