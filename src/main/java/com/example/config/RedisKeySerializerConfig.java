@@ -11,6 +11,14 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "serializer.redis.prefix")
 public class RedisKeySerializerConfig {
+    /**
+     * redis - key 序列化前缀开关
+     */
     private Boolean enable = Boolean.TRUE;
+
+    /**
+     * 前缀key - 建议使用项目名
+     * prefix::key
+     */
     private String key;
 }

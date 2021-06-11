@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.entity.TestConfig;
+import com.example.config.TestConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

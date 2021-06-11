@@ -1,6 +1,6 @@
 package com.example.controller.rest;
 
-import com.example.entity.TestConfig;
+import com.example.config.TestConfig;
 import com.example.entity.User;
 import com.example.service.TestService;
 import lombok.extern.slf4j.Slf4j;

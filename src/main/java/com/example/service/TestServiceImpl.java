@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.entity.TestConfig;
+import com.example.config.TestConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
