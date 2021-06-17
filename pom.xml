@@ -88,6 +88,18 @@
             <version>2.6.2</version>
         </dependency>
 
+        <!-- 脱敏 -->
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>sensitive-core</artifactId>
+            <version>0.0.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

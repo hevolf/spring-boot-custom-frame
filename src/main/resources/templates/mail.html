@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>yimcarson</title>
+    <style>
+        body {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #main {
+            text-align: center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <h3>Welcome <span th:text="${project}"></span> -By <span th:text=" ${author}"></span></h3>
+    Your Verification Code is
+    <h2><span th:text="${code}"></span></h2>
+
+    <div>
+        <table>
+            <tr>
+                <td>查询条数</td>
+                <td>用户账号</td>
+                <td>用户名称</td>
+            </tr>
+            <tr>
+                <td>132</td>
+                <td>aaa</td>
+                <td>aaa</td>
+            </tr>
+            <tr>
+                <td>122</td>
+                <td>bbb</td>
+                <td>bbbb</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
