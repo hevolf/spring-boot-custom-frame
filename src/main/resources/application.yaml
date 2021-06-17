@@ -1,0 +1,57 @@
+server:
+  servlet:
+    context-path: /aaa
+
+# 测试参数
+config:
+  name: ttttesst
+  age: 18
+
+spring:
+  thymeleaf:
+    cache: false  #是否启用缓存
+
+
+  mvc:
+    view:
+      suffix: ".html"  # view视图后缀（并非url路径）
+    pathmatch:
+      use-suffix-pattern: false  # 是否允许匹配.*
+      use-registered-suffix-pattern: false
+  http:
+    encoding:
+      force: true
+
+  #    static-path-pattern: /static/**
+  redis:
+    port: 6379
+    host: 192.168.68.10
+    password: 12345678
+    ### 需要引入相关依赖，否则报错, 一般无需线程池，性能影响不大
+  #    lettuce:
+  #      pool:
+  #        max-active: 8
+  #        max-wait: -1
+  #        max-idle: 8
+
+  # 邮箱参数配置
+  mail:
+    host: smtp.126.com
+    username: caohaifengx@126.com
+#    注意：如果提交只github防止密码泄露
+    password:
+    port: 465
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+      #      自定义参数，配置发送者（key可自定义，程序中根据key获取对应值）
+      from: caohaifengx@126.com
+
+# 自定义redis序列化前缀
+serializer:
+  redis:
+    prefix:
+      key: aaaa
+      enable: true
