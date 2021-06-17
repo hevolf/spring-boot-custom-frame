@@ -5,3 +5,4 @@
 spring-boot-framework.iml
 src/main/resources/static/plugin/
 target/
+#src/main/resources/application.yaml
