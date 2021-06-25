@@ -34,6 +34,14 @@ public class TestController {
         return "jjjjjjjj";
     }
 
+    @RequestMapping("/tetproperty")
+    public String tetproperty(){
+
+        log.info("ppp:{}", System.getProperties());
+        log.info("aaaa:{}",System.getProperty("tttt"));
+        return System.getProperty("tttt");
+    }
+
     @RequestMapping("/tet4")
     public String tet2(){
         return "jjj2jjjjj";

@@ -2,11 +2,6 @@ server:
   servlet:
     context-path: /aaa
 
-# 测试参数
-config:
-  name: ttttesst
-  age: 18
-
 spring:
   thymeleaf:
     cache: false  #是否启用缓存
@@ -40,6 +35,7 @@ spring:
     username: caohaifengx@126.com
 #    注意：如果提交只github防止密码泄露
     password:
+#   ssl-465  非ssl一般为25
     port: 465
     properties:
       mail:
@@ -48,6 +44,10 @@ spring:
             class: javax.net.ssl.SSLSocketFactory
       #      自定义参数，配置发送者（key可自定义，程序中根据key获取对应值）
       from: caohaifengx@126.com
+  ldap:
+    embedded:
+      ldif: classpath:ldap-server.ldif
+      base-dn: dc=didispace,dc=com
 
 # 自定义redis序列化前缀
 serializer:
@@ -55,3 +55,20 @@ serializer:
     prefix:
       key: aaaa
       enable: true
+
+# 是否开启@Configuration配置
+config:
+  redisson:
+    enable: true
+  hbase:
+#    是否开启 hbase template配置
+    enable: false
+    enableKerberos: true
+
+## actuator
+management:
+  health:
+    ldap:
+      enabled: false
+    mail:
+      enabled: false

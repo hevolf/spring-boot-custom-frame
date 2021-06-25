@@ -3,6 +3,7 @@ package com.example.config;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @author caohaifengx@163.com 2021-06-11 13:45
  */
 @Configuration
+@ConditionalOnProperty(prefix = "config.redisson", name = "enable", havingValue = "true")
 public class RedissonConfig {
 
     @Bean
